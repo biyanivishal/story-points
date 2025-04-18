@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-user-guide/user-guide" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.7.0">
+<title data-rh="true">Jira Story Points Calculator User Guide | Story Point Estimator</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://storypoint.biyani.xyz/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://storypoint.biyani.xyz/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://storypoint.biyani.xyz/docs/user-guide"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Jira Story Points Calculator User Guide | Story Point Estimator"><meta data-rh="true" name="description" content="This guide explains how to use the Story Points Calculator app to automatically generate story point estimates based on configurable scoring criteria."><meta data-rh="true" property="og:description" content="This guide explains how to use the Story Points Calculator app to automatically generate story point estimates based on configurable scoring criteria."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://storypoint.biyani.xyz/docs/user-guide"><link data-rh="true" rel="alternate" href="https://storypoint.biyani.xyz/docs/user-guide" hreflang="en"><link data-rh="true" rel="alternate" href="https://storypoint.biyani.xyz/docs/user-guide" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Story Point Estimator RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Story Point Estimator Atom Feed"><link rel="stylesheet" href="/assets/css/styles.ebd0f903.css">
+<script src="/assets/js/runtime~main.2a6f7252.js" defer="defer"></script>
+<script src="/assets/js/main.c0edc760.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Story Point Estimator</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/intro">Tutorial</a><a class="navbar__item navbar__link" href="/blog">Blog</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/intro">Story Points App for Jira (Forge)</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/category/tutorial---basics">Tutorial - Basics</a><button aria-label="Expand sidebar category &#x27;Tutorial - Basics&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/category/tutorial---extras">Tutorial - Extras</a><button aria-label="Expand sidebar category &#x27;Tutorial - Extras&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/admin-guide/configuration">admin-guide</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/development-notes/api-reference">development-notes</a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/getting-started">Getting Started</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible menu__list-item-collapsible--active"><a class="menu__link menu__link--sublist menu__link--active" aria-current="page" href="/docs/user-guide">Jira Story Points Calculator User Guide</a><button aria-label="Collapse sidebar category &#x27;Jira Story Points Calculator User Guide&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/user-guide/story-point-calculation">Story Point Calculation</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/user-guide/using-the-app">Using the App</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Jira Story Points Calculator User Guide</span><meta itemprop="position" content="1"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Jira Story Points Calculator User Guide</h1></header>
+<p>This guide explains how to use the Story Points Calculator app to automatically generate story point estimates based on configurable scoring criteria.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview">​</a></h2>
+<p>The Story Points Calculator automates the process of assigning story points to issues by:</p>
+<ol>
+<li>Evaluating issues against customizable criteria</li>
+<li>Calculating a numeric score based on these criteria</li>
+<li>Converting scores to story points using configurable mappings</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="accessing-the-configuration-panel">Accessing the Configuration Panel<a href="#accessing-the-configuration-panel" class="hash-link" aria-label="Direct link to Accessing the Configuration Panel" title="Direct link to Accessing the Configuration Panel">​</a></h2>
+<ol>
+<li>Navigate to your Jira project</li>
+<li>Click on the &quot;Project settings&quot; gear icon</li>
+<li>Find and select &quot;Story Points Calculator&quot; from the left sidebar</li>
+<li>Click &quot;Configure&quot; to open the configuration panel</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="configuration-tabs">Configuration Tabs<a href="#configuration-tabs" class="hash-link" aria-label="Direct link to Configuration Tabs" title="Direct link to Configuration Tabs">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scoring-criteria">Scoring Criteria<a href="#scoring-criteria" class="hash-link" aria-label="Direct link to Scoring Criteria" title="Direct link to Scoring Criteria">​</a></h3>
+<p>This tab allows you to define factors that contribute to an issue&#x27;s complexity score.</p>
+<p><strong>Adding a Criterion:</strong></p>
+<ol>
+<li>Click &quot;Add New Criterion&quot;</li>
+<li>Enter a name for the criterion (e.g., &quot;Technical Complexity&quot;, &quot;Business Value&quot;)</li>
+<li>Set a weight to determine its importance in the overall calculation</li>
+<li>Define score boundaries (min, max) and default value</li>
+<li>Toggle whether this criterion is enabled</li>
+</ol>
+<p><strong>Editing Criteria:</strong></p>
+<ul>
+<li>Modify any field directly in the table</li>
+<li>Values are validated in real-time to ensure consistency</li>
+</ul>
+<p><strong>Removing Criteria:</strong></p>
+<ul>
+<li>Click the &quot;Remove&quot; button next to any criterion you wish to delete</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="story-point-mapping">Story Point Mapping<a href="#story-point-mapping" class="hash-link" aria-label="Direct link to Story Point Mapping" title="Direct link to Story Point Mapping">​</a></h3>
+<p>This tab defines how numeric scores translate to story point values.</p>
+<p><strong>Adding a Mapping Range:</strong></p>
+<ol>
+<li>Click &quot;Add Story Point Range&quot;</li>
+<li>Define the minimum and maximum scores for this range</li>
+<li>Assign the story point value for this range (typically using Fibonacci sequence: 1, 2, 3, 5, 8, 13, etc.)</li>
+</ol>
+<p><strong>Example Configuration:</strong></p>
+<ul>
+<li>Scores 0-20: 1 point</li>
+<li>Scores 21-40: 2 points</li>
+<li>Scores 41-70: 3 points</li>
+<li>Scores 71-100: 5 points</li>
+<li>Scores 101-150: 8 points</li>
+<li>Scores 151+: 13 points</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="general-settings">General Settings<a href="#general-settings" class="hash-link" aria-label="Direct link to General Settings" title="Direct link to General Settings">​</a></h3>
+<p>This tab contains global configuration options.</p>
+<p><strong>Score Range:</strong></p>
+<ul>
+<li>Set the minimum and maximum possible scores across all criteria</li>
+<li>Enable or disable negative scores</li>
+</ul>
+<p><strong>Calculation Method:</strong></p>
+<ul>
+<li>Sum: Add all criteria scores</li>
+<li>Average: Calculate mean of all criteria scores</li>
+<li>Weighted: Calculate weighted average based on criteria weights</li>
+</ul>
+<p><strong>Story Points Field:</strong></p>
+<ol>
+<li>Enter the name of your Jira field used for story points</li>
+<li>Click &quot;Validate&quot; to verify the field exists</li>
+<li>Select the matching field from the dropdown if multiple options appear</li>
+</ol>
+<p><strong>Version Retention:</strong></p>
+<ul>
+<li>Choose how many previous configuration versions to retain in history</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="history">History<a href="#history" class="hash-link" aria-label="Direct link to History" title="Direct link to History">​</a></h3>
+<p>This tab shows a log of all configuration changes:</p>
+<ul>
+<li>Who made the changes</li>
+<li>When changes occurred</li>
+<li>Detailed before/after comparisons</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="using-the-calculator">Using the Calculator<a href="#using-the-calculator" class="hash-link" aria-label="Direct link to Using the Calculator" title="Direct link to Using the Calculator">​</a></h2>
+<p>Once configured, the calculator will:</p>
+<ol>
+<li>Automatically calculate scores when viewing or editing issues</li>
+<li>Suggest story point values based on configured mappings</li>
+<li>Update the specified Jira field with calculated story points</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices">Best Practices<a href="#best-practices" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices">​</a></h2>
+<ol>
+<li>Start with a small set of criteria (3-5) that most impact complexity</li>
+<li>Use weighted calculation for more nuanced scoring</li>
+<li>Adjust mappings based on team velocity and feedback</li>
+<li>Review and refine the configuration periodically</li>
+<li>Use the history tab to track the impact of configuration changes</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="troubleshooting">Troubleshooting<a href="#troubleshooting" class="hash-link" aria-label="Direct link to Troubleshooting" title="Direct link to Troubleshooting">​</a></h2>
+<p><strong>Issue: Story points not updating</strong></p>
+<ul>
+<li>Verify the correct Jira field is configured</li>
+<li>Check if all criteria are properly configured</li>
+<li>Ensure users have permission to update story points</li>
+</ul>
+<p><strong>Issue: Unexpected score values</strong></p>
+<ul>
+<li>Review the min/max settings for each criterion</li>
+<li>Check if negative scores are enabled/disabled as expected</li>
+<li>Verify the calculation method is appropriate</li>
+</ul>
+<p><strong>Issue: Configuration errors</strong></p>
+<ul>
+<li>Review validation messages in the interface</li>
+<li>Ensure min values are less than max values</li>
+<li>Verify no gaps exist in story point mapping ranges</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/biyanivishal/story-points/edit/main/docs/user-guide/user-guide.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/getting-started"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Getting Started</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/user-guide/story-point-calculation"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Story Point Calculation</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#accessing-the-configuration-panel" class="table-of-contents__link toc-highlight">Accessing the Configuration Panel</a></li><li><a href="#configuration-tabs" class="table-of-contents__link toc-highlight">Configuration Tabs</a><ul><li><a href="#scoring-criteria" class="table-of-contents__link toc-highlight">Scoring Criteria</a></li><li><a href="#story-point-mapping" class="table-of-contents__link toc-highlight">Story Point Mapping</a></li><li><a href="#general-settings" class="table-of-contents__link toc-highlight">General Settings</a></li><li><a href="#history" class="table-of-contents__link toc-highlight">History</a></li></ul></li><li><a href="#using-the-calculator" class="table-of-contents__link toc-highlight">Using the Calculator</a></li><li><a href="#best-practices" class="table-of-contents__link toc-highlight">Best Practices</a></li><li><a href="#troubleshooting" class="table-of-contents__link toc-highlight">Troubleshooting</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Tutorial</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://x.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">X<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/biyanivishal/story-points" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
