@@ -91,9 +91,10 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
+          {to: '/trust', label: 'Trust', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/biyanivishal/story-points/issues',
             label: 'GitHub',
             position: 'right',
           },

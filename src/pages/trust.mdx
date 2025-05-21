@@ -1,0 +1,125 @@
+import Head from '@docusaurus/Head';
+
+<Head>
+  <title>Trust Center | Story Point Estimator</title>
+  <meta name="description" content="Security and trust information for our Atlassian Forge app" />
+</Head>
+
+# 🔐 Trust & Security Center
+
+We are committed to building secure, reliable Forge apps for the Atlassian ecosystem. This page outlines our security posture, data handling practices, and testing strategies.
+
+---
+
+<details>
+  <summary>🛡️ <strong>Security Practices</strong></summary>
+
+  <ul>
+    <li>
+      <strong>Built on Atlassian Forge</strong>  
+      <br />
+      The app runs in a secure, sandboxed environment with permission-based access enforced by Forge.
+    </li>
+    <li>
+      <strong>Static Code Analysis with SonarQube</strong>  
+      <br />
+      We use SonarScan against a self-hosted SonarQube instance and have addressed all <strong>high</strong> and <strong>critical</strong> issues.
+    </li>
+    <li>
+      <strong>Minimal Permission Scopes</strong>  
+      <br />
+      The app only requests the least privilege required to function, following Atlassian’s scope guidance.
+    </li>
+  </ul>
+</details>
+
+---
+
+<details>
+  <summary>🧪 <strong>Testing & QA</strong></summary>
+
+  <ul>
+    <li>
+      <strong>Unit Testing with Jest</strong>  
+      <br />
+      Core business logic is covered by a suite of Jest tests, ensuring stability and correctness.
+    </li>
+    <li>
+      <strong>Manual QA</strong>  
+      <br />
+      Releases are manually tested across multiple Jira project types to ensure consistent user experience.
+    </li>
+  </ul>
+</details>
+
+---
+
+<details>
+  <summary>🔄 <strong>Data Handling & Privacy</strong></summary>
+
+  <ul>
+    <li>
+      <strong>No PII Stored</strong>  
+      <br />
+      We do not collect or persist personally identifiable information.
+    </li>
+    <li>
+      <strong>Secure Storage</strong>  
+      <br />
+      Configuration and state data is stored using Forge's encrypted <a href="https://developer.atlassian.com/platform/forge/runtime-reference/storage-api/" target="_blank">Storage API</a>.
+    </li>
+    <li>
+      <strong>Zero External Infrastructure</strong>  
+      <br />
+      This app operates entirely on Atlassian’s cloud infrastructure. No third-party servers are involved.
+    </li>
+  </ul>
+</details>
+
+---
+
+<details>
+  <summary>📜 <strong>Compliance & Support</strong></summary>
+
+  <ul>
+    <li>
+      <strong>GDPR Alignment</strong>  
+      <br />
+      We align with GDPR principles—data minimization, transparency, and user control.
+    </li>
+    <li>
+      <strong>Security Contact</strong>  
+      <br />
+      Found something concerning? Email us at <a href="mailto:security@biyani.xyz">security@biyani.xyz</a>.
+    </li>
+  </ul>
+</details>
+
+---
+<span
+  style={{
+    backgroundColor: '#e6fffa',
+    color: '#0c4a6e',
+    border: '1px solid #22d3ee',
+    borderRadius: '12px',
+    padding: '4px 10px',
+    fontSize: '0.85rem',
+    fontWeight: 600,
+    display: 'inline-block',
+    marginTop: '1rem',
+  }}
+>
+  🔐 SonarQube Verified
+</span>
+
+🔐 Secure by Design
+
+📊 SonarQube Scanned
+
+🧪 Jest Tested
+
+🛡️ Forge Hosted & Compliant
+
+🔍 Static Code Reviewed
+
+_Last updated: April 2025_
